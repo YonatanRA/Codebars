@@ -18,10 +18,10 @@
          CodeBar 
     </p>
         <img src="{{ url_for('video') }}">
-    <button onclick="Foto()"  type="submit" style="border-radius: 50%; background-color: #1eff5b; height: 100px; width: 100px; margin-left:0.5px; margin-right:0.5px; margin-top:0.5px; margin-bottom:0.5px">Foto</button> 
-    
 
-	</style>
+        <button onclick="Foto()"  type="submit" style="border-radius: 50%; background-color: #1eff5b; height: 100px; width: 100px; margin-left:0.5px; margin-right:0.5px; margin-top:0.5px; margin-bottom:0.5px">Foto</button> 
+   
+     
 
         <h2>
         <a href="/" >Captura</a>
@@ -30,10 +30,10 @@
         <a href="/" >fotos</a>
 		</h2>
 		
-		
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
 	 <script>
 	function Foto() {
-	  var name=document.getElementById("input").value;
+	  var name='captura';
 	  $.post("/tomar_foto",
 	   {
 		 name: name
