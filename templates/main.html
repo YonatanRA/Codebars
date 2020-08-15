@@ -33,13 +33,10 @@
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
 	 <script>
 	function Foto() {
-	  var name='captura';
+
 	  $.post("/tomar_foto",
-	   {
-		 name: name
-	   },
-	   function(data, status){
-		 alert("Data: " + data + "\nStatus: " + status);
+	   function(){
+		 alert("Foto guardada");
 	   });
 	}
 	</script>
