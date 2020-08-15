@@ -17,18 +17,32 @@
     <p style="font-family:lato;font-size:25px;">
          CodeBar 
     </p>
-    
-    <a href="/proceso" type="submit" style="border-radius: 50%; background-color: #1eff5b; height: 100px; width: 100px; margin-left:0.5px; margin-right:0.5px; margin-top:0.5px; margin-bottom:0.5px">Foto</a> 
+        <img src="{{ url_for('video') }}">
+    <button onclick="Foto()"  type="submit" style="border-radius: 50%; background-color: #1eff5b; height: 100px; width: 100px; margin-left:0.5px; margin-right:0.5px; margin-top:0.5px; margin-bottom:0.5px">Foto</button> 
     
 
 	</style>
 
         <h2>
-        <a href="/captura" >Captura</a>
+        <a href="/" >Captura</a>
         <a href="/" >Item</a>
         <a href="/" >Similares</a>
         <a href="/" >fotos</a>
 		</h2>
+		
+		
+	 <script>
+	function Foto() {
+	  var name=document.getElementById("input").value;
+	  $.post("/tomar_foto",
+	   {
+		 name: name
+	   },
+	   function(data, status){
+		 alert("Data: " + data + "\nStatus: " + status);
+	   });
+	}
+	</script>
 
 
 
