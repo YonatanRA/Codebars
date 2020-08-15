@@ -2,18 +2,39 @@
 
   <head>
     <title>CodeBar</title>
+    
+		<style>
+	body {background-color: red;}
+	h1   {color: blue;}
+	p    {color: yellow;}
+	
+
+	</style>
   </head>
 
   <body>
 
-    <p style = "font-family:lato;font-size:25px;">
-         Captura
+    <p style="font-family:lato;font-size:25px;">
+         CodeBar 
     </p>
     
     <img src="{{ url_for('video') }}">
+    <button type="button" style="border-radius: 50%; background-color: #1eff5b; height: 100px; width: 100px; margin-left:0.5px; margin-right:0.5px; margin-top:0.5px; margin-bottom:0.5px">Foto</button> 
     
 
-    
+	</style>
+
+        <h2>
+        <a href="/" >Captura</a>
+        <a href="/" >Item</a>
+        <a href="/" >Similares</a>
+        <a href="/" >fotos</a>
+		</h2>
+
+
+
+    <div>CodeBar</div>
+	{% block content %}{% endblock %}
   </body>
 
 </html>
